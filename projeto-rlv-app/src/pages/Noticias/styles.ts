@@ -22,10 +22,26 @@ const styles = StyleSheet.create({
     borderBottomColor: "#000000",
   },
   aviso: {
+    fontSize: 32,
+    fontWeight: "bold",
+    color: "#6b533c",
+    backgroundColor: "#9e613078",
+    borderRadius: 7,
+    elevation: 1,
+    padding: 36,
+  },
+  busca: {
+    height: 300,
+    width: "100%",
+    padding: 10,
+    alignItems: "center",
+    backgroundColor: "#fcebdc",
+  },
+  noticias: {
     flex: 1,
-    backgroundColor: '#ffffff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fcebdc",
+    alignItems: "center",
+    justifyContent: "center",
   }
 });
 

@@ -40,23 +40,21 @@ export default function useNoticiasFiltradas() {
         try {
             iniciarProcessamento()
 
-            const url = 'https://servicodados.ibge.gov.br/api/v3/noticias/?qtd=9'
+            let url = 'https://servicodados.ibge.gov.br/api/v3/noticias/'
 
-            // let url = 'https://servicodados.ibge.gov.br/api/v3/noticias/'
-
-            // if (filtros.palavraChave != '') {
-            //     url += `?busca=${filtros.palavraChave}`
-            // } else if (filtros.dataMinima != '') {
-            //     url += `?de=${converterData(filtros.dataMinima)}`
-            // } else if (filtros.dataMaxima != '') {
-            //     url += `?ate=${converterData(filtros.dataMaxima)}`
-            // } else if (filtros.tipo != '') {
-            //     const tipo = converterTipo(filtros.tipo);
-            //     url += `?tipo=${tipo}`
-            // } else {
-            //     url += `?qtd=9`
-            // }
-
+            if (filtros.palavraChave != '') {
+                url += `?busca=${filtros.palavraChave}`
+            } else if (filtros.dataMinima != '') {
+                url += `?de=${converterData(filtros.dataMinima)}`
+            } else if (filtros.dataMaxima != '') {
+                url += `?ate=${converterData(filtros.dataMaxima)}`
+            } else if (filtros.tipo != '') {
+                const tipo = converterTipo(filtros.tipo);
+                url += `?tipo=${tipo}`
+            } else {
+                url += `?qtd=33`
+            }
+     
             const resp = await fetch(url)
             const dados = await resp.json()
             setNoticias(dados.items)

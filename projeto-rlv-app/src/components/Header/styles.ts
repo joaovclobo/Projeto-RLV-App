@@ -2,8 +2,8 @@ import {StyleSheet} from "react-native";
 
 const styles = StyleSheet.create({
   header: {
-    height: 100,
-    paddingTop: 35,
+    height: 80,
+    paddingTop: 40,
     width: "100%",
     alignItems: "center",
     backgroundColor: "#9e613078",
@@ -13,13 +13,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     color: "#efcead",
-  },
-  input: {
-    backgroundColor: "#ffffff",
-    borderRadius: 4,
-    marginTop: 12,
-    width: "80%",
-    padding: 8,
   },
 });
 
