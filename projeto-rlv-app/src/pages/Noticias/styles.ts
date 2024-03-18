@@ -21,6 +21,12 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     borderBottomColor: "#000000",
   },
+  aviso: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
 });
 
 export default styles;

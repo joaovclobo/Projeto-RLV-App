@@ -3,6 +3,7 @@ import CardNoticia from '../../components/CardNoticia';
 import Noticia from '../../data/useNoticiasFiltradas'
 import useNoticiasFiltradas from '../../data/useNoticiasFiltradas';
 import styles from './styles';
+import InfosNoticia from '../../components/InfosNoticia';
 
 interface ItemList {
     item: Noticia;
@@ -10,23 +11,36 @@ interface ItemList {
 
 function Noticias() {
 
-    const { noticias } = useNoticiasFiltradas()
+    const { processando, noticias, noticiaSelecionada, selecionarNoticia, voltar, defineFiltros } = useNoticiasFiltradas()
 
     const renderNoticia = ({item}: ItemList) => (
-        <CardNoticia noticia={item} />
+        <CardNoticia noticia={item} selecionar={selecionarNoticia} />
     )
 
     return (
         <View style={styles.content}>
-            <FlatList
-                style={styles.flatList}
-                showsVerticalScrollIndicator={false}
-                data={noticias}
-                renderItem={renderNoticia}
-                keyExtractor={item => String(item.id)}
-            />
+            {processando ? (
+                <Text style={styles.aviso}>Buscando notícias...</Text>
+            ) : noticiaSelecionada != null ?(
+                <InfosNoticia noticia={noticiaSelecionada} voltar={voltar} />
+            ) : noticias.length > 0 ? (
+                <View>
+                <FlatList
+                    style={styles.flatList}
+                    showsVerticalScrollIndicator={false}
+                    data={noticias}
+                    renderItem={renderNoticia}
+                    keyExtractor={item => String(item.id)}
+                />
+            </View>
+            ) : (
+                <Text style={styles.aviso}>Notícias não encontradas... Tente novamente!</Text>
+            )}
+
         </View>
     )
 }
 
 export default Noticias;
+
+

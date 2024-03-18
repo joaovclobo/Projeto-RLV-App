@@ -71,6 +71,10 @@ export default function useNoticiasFiltradas() {
         setNoticiaSelecionada(noticiaSelecionada)
     }
 
+    function voltar() {
+        setNoticiaSelecionada(null)
+    }
+
     function defineFiltros(filtros: any) {
         setFiltros(filtros)
     }
@@ -84,6 +88,7 @@ export default function useNoticiasFiltradas() {
         noticiaSelecionada,
         processando,
         selecionarNoticia,
+        voltar,
         defineFiltros,
     }
 }
