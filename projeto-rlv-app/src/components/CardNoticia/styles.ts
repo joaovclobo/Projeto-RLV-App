@@ -3,15 +3,15 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   card: {
     flex: 1,
-    backgroundColor: "#f5f5f5",
-    borderRadius: 4,
+    backgroundColor: "#9e613078",
+    borderRadius: 7,
     elevation: 4,
     margin: 8,
     padding: 16,
   },
   image: {
     width: "100%",
-    borderRadius: 2,
+    borderRadius: 1,
     height: 150,
     resizeMode: "cover",
     marginBottom: 8,

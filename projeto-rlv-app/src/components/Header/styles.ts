@@ -6,13 +6,13 @@ const styles = StyleSheet.create({
     paddingTop: 35,
     width: "100%",
     alignItems: "center",
-    backgroundColor: "#000000",
+    backgroundColor: "#9e613078",
   },
   headerText: {
     textAlign: "center",
     fontSize: 24,
     fontWeight: "bold",
-    color: "#ffffff",
+    color: "#efcead",
   },
   input: {
     backgroundColor: "#ffffff",

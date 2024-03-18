@@ -40,7 +40,7 @@ export default function useNoticiasFiltradas() {
         try {
             iniciarProcessamento()
 
-            const url = 'https://servicodados.ibge.gov.br/api/v3/noticias/?qtd=3'
+            const url = 'https://servicodados.ibge.gov.br/api/v3/noticias/?qtd=9'
 
             // let url = 'https://servicodados.ibge.gov.br/api/v3/noticias/'
 

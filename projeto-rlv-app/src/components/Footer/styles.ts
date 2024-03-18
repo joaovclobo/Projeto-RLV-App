@@ -6,12 +6,12 @@ const styles = StyleSheet.create({
     height: 50,
     padding: 16,
     alignItems: "center",
-    backgroundColor: "#000000",
+    backgroundColor: "#9e613078",
   },
   footerText: {
     fontSize: 14,
     fontWeight: "bold",
-    color: "#ffffff",
+    color: "#efcead",
   },
 });
 

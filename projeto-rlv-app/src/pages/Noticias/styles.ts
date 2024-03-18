@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingBottom: 24,
     alignItems: "center",
-    backgroundColor: "#ffffff",
+    backgroundColor: "#fcebdc",
   },
   flatList: {
     width: "80%",
